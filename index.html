@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Rock, Paper & Scissor</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+
+
+</head>
+<body>
+<h1 class='title'>Rock, Paper & Scissor</h1>
+
+<main>
+	<section id='getReady'>
+		<h2>Select your arm</h2>
+		<div id='ctr-arm'>
+			<span id='rock' class='armor'></span>
+			<span id='paper' class='armor'></span>
+			<span id='scissor' class='armor'></span>
+		</div>
+		<button id='btn-start'>Start</button>
+	</section>
+	
+	<section id='pvp'>
+		<span id='yourArm'></span>
+		<p>VS</p>
+		<span id='botArm'>
+			<div class="cell">
+				<span style="--i:1;"></span>
+				<span style="--i:2;"></span>
+				<span style="--i:3;"></span>
+			</div>
+		</span>
+		<button id='btn-reset'>Play Again</button>
+	</section>
+	<p id='result'></p>
+</main>
+
+<footer>
+  <p>Copyright &#169; 2024 Esmat. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+
+            

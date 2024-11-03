@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+:root {
+	--primary: #FABC3F;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	display: flex;
+	text-align:center;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+	justify-content: center;
+	background: radial-gradient(at center, #4757a0, #000);
+	color: #fafafa;
+	font-family: "Nerko One", cursive;
+  	font-weight: 400;
+ 	font-style: normal;
+	font-size: 16px;
+}
+.title {
+	font-size: 3.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+b {
+	color: var(--primary);
+}
+
+main {
+	position: relative;
+}
+#getReady {
+	opacity: 1;
+}
+#ctr-arm {
+	display: flex;
+	gap: 16px;
+	margin: 16px 0;
+}
+#ctr-arm span {
+	background-size: contain;
+	background-position: center;
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+}
+#ctr-arm span:hover {
+	transform: scale(1.1);
+}
+.active {
+	filter: drop-shadow(0px 0px 15px var(--primary));
+	transform: scale(1.1);
+}
+#rock {
+	background-image: url('https://images.vexels.com/content/145641/preview/earth-stone-illustration-8dd583.png');
+}
+#paper {
+	background-image: url('https://cdn-icons-png.freepik.com/512/2541/2541988.png');
+}
+#scissor {
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Gtk-cut.svg/1024px-Gtk-cut.svg.png');
+}
+#btn-start, #btn-reset {
+	font-family: "Nerko One", cursive;
+	font-size: 1.8rem;
+	background: var(--primary);
+	color: #fafafa;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 6px 30px;
+	border-radius: 25px;
+}
+#btn-start:hover, #btn-reset:hover {
+	transform: scale(1.2);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, .2);
+}
+
+#pvp {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+#pvp span {
+	width: 100%;
+	aspect-ratio: 1/1;
+	background-size:contain;
+	background-position:center;
+}
+#pvp p {
+	font-size: 2.5rem;
+}
+#btn-reset {
+	position:absolute;
+	bottom: -10%;
+}
+.cell {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(61, 0, 0, 0),
+    rgba(61, 0, 0, 1) 20%,
+    rgba(61, 0, 0, 1) 80%,
+    rgba(61, 0, 0, 0)
+  );
+}
+.cell span {
+  position: absolute;
+	left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  animation: autoSlide 2s linear infinite;
+  animation-delay: calc((2s / 3) * (3 - var(--i)) * -1);
+}
+@keyframes autoSlide {
+  to {
+    top: -200%;
+  }
+}
+
+.cell span:nth-child(1) {
+	background-image: url('https://images.vexels.com/content/145641/preview/earth-stone-illustration-8dd583.png');
+}
+.cell span:nth-child(2) {
+	background-image: url('https://cdn-icons-png.freepik.com/512/2541/2541988.png');
+}
+.cell span:nth-child(3) {
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Gtk-cut.svg/1024px-Gtk-cut.svg.png');
+}
+
+#result {
+	position: absolute;
+	font-size: 5rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 0px 0px 60px rgba(0, 0, 0, 1), 0px 0px 60px rgba(0, 0, 0, 1), 0px 0px 60px rgba(0, 0, 0, 1);
+	padding: 30px 80px;
+	pointer-events: none;
+	display: none;
+}                                         
+            
